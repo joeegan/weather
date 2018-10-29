@@ -1,0 +1,125 @@
+body {
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  margin: 40px;
+  overflow: hidden;
+}
+
+.cols {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.col {
+  width: calc(33% - 80px);
+  margin: 40px;
+}
+
+.circle-wrap {
+  position: relative;
+  height: 500px;
+  border: 1px solid white;
+  padding: 40px;
+}
+
+.circle-wrap .figure {
+  margin: 40% auto
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  border: 1px solid white;
+}
+
+.circle.selected {
+  background: red;
+}
+
+.figure  {
+  margin: 20px;
+  width: 200px;
+}
+
+.figure .val {
+  font-size: 84px;
+  display: block;
+  text-align: right;
+}
+
+.figure .desc {
+  font-size: 14px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+nav {
+}
+
+nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav li {
+  padding: 0;
+  display: block;
+  flex-basis: 0;
+  flex: 1;
+
+}
+
+nav a {
+  display: block;
+  border: 1px solid white;
+  border-radius: 3px;
+  margin-right: 10px;
+  padding: 2px 5px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+nav a.active {
+  background: red;
+}
+
+nav li:last-child a {
+  margin-right: 0;
+}
+
+
+.dir-single {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dir {
+  font-size: 32px;
+}
+
+.horiz-dirs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
