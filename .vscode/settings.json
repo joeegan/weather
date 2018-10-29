@@ -1,0 +1,12 @@
+{
+    "eslint.autoFixOnSave": true,
+    "editor.minimap.enabled": false,
+    "git.confirmSync": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": -1,
+    "git.autofetch": true,
+    "workbench.editor.enablePreview": false,
+    "window.title": "${rootName}${separator}${dirty}${activeEditorMedium}",
+    "editor.fontFamily": "Monaco, 'Courier New', monospace",
+    "editor.fontSize": 13,
+}
