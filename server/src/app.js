@@ -55,4 +55,5 @@ app.get('/latest', async (req, res, next) => {
   next()
 })
 
-app.listen(4000)
+app.listen(process.env.PORT)
+console.log(`running on ${process.env.PORT}`)

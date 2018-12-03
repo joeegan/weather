@@ -12,4 +12,7 @@ RUN npm install
 
 EXPOSE 8000
 
-CMD [ "npm", "start" ]
+RUN adduser -D myuser
+USER myuser
+
+CMD npm start PORT=$PORT

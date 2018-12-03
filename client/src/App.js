@@ -5,6 +5,8 @@ import './App.css';
 import Figure from './Figure';
 import Periods from './Periods';
 
+const host = window.location.pathname.includes('localhost') ? 'https://weather-marshfield.herokuapp.com' : 'https://weather-marshfield.herokuapp.com'
+
 class App extends Component {
 
   constructor(props) {
@@ -13,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:4000/latest`)
+    axios.get(`${host}/latest`)
       .then(res => {
         this.setState({
           ...res.data
@@ -32,17 +34,19 @@ class App extends Component {
           <Figure val={this.state.hum_act} desc="Humidity (%)" />
         </div>
         <div className="col">
-          <WindDirection 
+          <Figure val={this.state.wind_dir_act} desc="Wind dir" />
+          <Figure val={this.state.wind_speed_act} desc="Wind speed" />
+          {/* <WindDirection 
             deg={this.state.wind_dir_act} 
             speed={this.state.wind_speed_act}
             />
-          <Periods />
+          <Periods /> */}
         </div>
         <div className="col">
           <Figure val={this.state.sol_rad_act} desc="Solar radiation (W/qm)" />
           <Figure val={this.state.rain_rate_act} desc="Rain rate (mm)" />
-          <Figure val={this.state.rain_total_daysum} desc="Rain total since midnight (mm)" />
-          <Figure val={this.state.wind_speed_avg_60} desc="Average wind over the last hour (mph)" />
+          {/* <Figure val={this.state.rain_total_daysum} desc="Rain total since midnight (mm)" /> */}
+          {/* <Figure val={this.state.wind_speed_avg_60} desc="Average wind over the last hour (mph)" /> */}
         </div>
       </div>
     );
