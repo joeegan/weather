@@ -5,7 +5,7 @@ import './App.css';
 import Figure from './Figure';
 import Periods from './Periods';
 
-const host = window.location.pathname.includes('localhost') ? 'https://weather-marshfield.herokuapp.com' : 'https://weather-marshfield.herokuapp.com'
+const host = window.location.pathname.includes('localhost') ? 'http://localhost:8000' : 'https://weather-marshfield.herokuapp.com'
 
 class App extends Component {
 
