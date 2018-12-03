@@ -1,3 +1,8 @@
+### DB
 RDS db (mysql) is manually configured on aws
-client react app is deployed to s3 via aws cli
-server is a docker container deployed to heroku
+
+### Client
+React app is deployed to s3 via aws cli
+
+### Server
+Docker container deployed to heroku
