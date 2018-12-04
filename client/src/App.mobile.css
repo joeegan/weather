@@ -1,6 +1,18 @@
 @media (max-width: 1000px) {
+    body {
+      margin: 10px;
+    }
     .cols {
       flex-direction: column;
       justify-content: flex-start;
+    }
+    .dir {
+      margin: auto 0;
+    }
+    .circle-wrap {
+      height: 250px;
+      width: 250px;
+      padding: 23px;
+      margin: 13px;
     }
   }

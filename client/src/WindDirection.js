@@ -12,14 +12,16 @@ const shouldSelectCreator = deg => {
     )
 }
 
-const getDeg = i =>
-    Math.round(
+const getDeg = i => Math.round(
         (360 / CIRCLE_QTY) * i
     )
 
-const Circle = ({ i, selected }) =>
-    <div style={{ transform: `rotate(${getDeg(i)}deg) translate(220px)` }}
+
+const Circle = ({ i, selected }) => {
+    const translate = window.innerWidth > 500 ? '220px' : '120px'
+    return <div style={{ transform: `rotate(${getDeg(i)}deg) translate(${translate})` }}
         className={`circle ${selected ? 'selected' : ''}`} />
+}
 
 export default ({ deg, speed }) => {
   const shouldSelect = shouldSelectCreator(deg)
@@ -27,14 +29,14 @@ export default ({ deg, speed }) => {
       <Fragment>
           <p className="dir dir-single">N</p>
             <div className="horiz-dirs">
-                <p className="dir">E</p>
+                <p className="dir">W</p>
                 <div className='circle-wrap'>
                 {times(identity, CIRCLE_QTY).map(
                     i => <Circle key={i} i={i} selected={shouldSelect(i)} />
                 )}
                 <Figure desc="Windspeed (MPH)" val={speed} />
                 </div>
-                <p className="dir">W</p>
+                <p className="dir">E</p>
              </div>
         <p className="dir dir-single">S</p>
         </Fragment>

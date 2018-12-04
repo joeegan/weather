@@ -19,11 +19,14 @@ body {
   position: relative;
   height: 500px;
   width: 500px;
-  padding: 20px 0;
+  padding: 20px;
+  border: 1px solid white;
+  display: flex;
 }
 
 .circle-wrap .figure {
-  margin: 39% auto
+  flex: 1;
+  margin: auto;
 }
 
 .circle {
@@ -50,7 +53,7 @@ body {
 }
 
 .dir-single {
-  margin: auto 0px;
+  margin: 20px 0px;
 }
 
 .dir-single:last-child {
