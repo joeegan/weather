@@ -15,4 +15,8 @@
       padding: 23px;
       margin: 13px;
     }
+    .circle {
+      height: 17px;
+      width: 17px;
+    }
   }
