@@ -1,0 +1,6 @@
+@media (max-width: 1000px) {
+    .cols {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }

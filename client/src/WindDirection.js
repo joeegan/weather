@@ -27,7 +27,7 @@ export default ({ deg, speed }) => {
       <Fragment>
           <p className="dir dir-single">N</p>
             <div className="horiz-dirs">
-                <p className="dir dir-single">E</p>
+                <p className="dir">E</p>
                 <div className='circle-wrap'>
                 {times(identity, CIRCLE_QTY).map(
                     i => <Circle key={i} i={i} selected={shouldSelect(i)} />

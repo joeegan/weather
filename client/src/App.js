@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import WindDirection from './WindDirection';
 import axios from 'axios';
 import './App.css';
+import './App.mobile.css';
 import Figure from './Figure';
 import Periods from './Periods';
 
@@ -16,11 +17,11 @@ class App extends Component {
 
   componentDidMount() {
     axios.get(`${host}/latest`)
-      .then(res => {
+      .then(({data}) => {
         this.setState({
-          ...res.data
+          ...data
         });
-      }) // JSON-string from `response.json()` call
+      })
       .catch(error => console.error(error));
   }
 
@@ -34,13 +35,13 @@ class App extends Component {
           <Figure val={this.state.hum_act} desc="Humidity (%)" />
         </div>
         <div className="col">
-          <Figure val={this.state.wind_dir_act} desc="Wind dir" />
-          <Figure val={this.state.wind_speed_act} desc="Wind speed" />
-          {/* <WindDirection 
+          {/* <Figure val={this.state.wind_dir_act} desc="Wind dir" /> */}
+          {/* <Figure val={this.state.wind_speed_act} desc="Wind speed" /> */}
+          <WindDirection 
             deg={this.state.wind_dir_act} 
             speed={this.state.wind_speed_act}
             />
-          <Periods /> */}
+          {/* <Periods /> */}
         </div>
         <div className="col">
           <Figure val={this.state.sol_rad_act} desc="Solar radiation (W/qm)" />

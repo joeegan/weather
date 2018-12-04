@@ -3,7 +3,6 @@ body {
   color: white;
   text-transform: uppercase;
   margin: 40px;
-  overflow: hidden;
 }
 
 .cols {
@@ -14,19 +13,17 @@ body {
 }
 
 .col {
-  width: calc(33% - 80px);
-  margin: 40px;
 }
 
 .circle-wrap {
   position: relative;
   height: 500px;
-  border: 1px solid white;
-  padding: 40px;
+  width: 500px;
+  padding: 20px 0;
 }
 
 .circle-wrap .figure {
-  margin: 40% auto
+  margin: 39% auto
 }
 
 .circle {
@@ -46,19 +43,39 @@ body {
   background: red;
 }
 
+.dir {
+  font-size: 32px;
+  margin: auto 30px;
+  text-align: center;
+}
+
+.dir-single {
+  margin: auto 0px;
+}
+
+.dir-single:last-child {
+  margin-bottom: 40px;
+}
+
+.horiz-dirs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .figure  {
-  margin: 20px;
-  width: 200px;
+  margin: 0 0 60px;
+  text-align: center;
 }
 
 .figure .val {
   font-size: 84px;
   display: block;
-  text-align: right;
 }
 
 .figure .desc {
   font-size: 14px;
+  display: block;
 }
 
 @keyframes App-logo-spin {
@@ -109,17 +126,3 @@ nav li:last-child a {
 }
 
 
-.dir-single {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.dir {
-  font-size: 32px;
-}
-
-.horiz-dirs {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
